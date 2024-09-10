@@ -68,39 +68,7 @@
     <script src="js/firebase-config.js"></script>
 
     <!-- Script de Login -->
-    <script>
-        // Referência ao formulário e ao elemento para exibir mensagens de erro
-        var loginForm = document.getElementById('loginForm');
-        var errorMessage = document.getElementById('error-message');
-
-        // Adicionar evento de submit ao formulário
-        loginForm.addEventListener('submit', function (e) {
-            var bool = true
-            e.preventDefault(); // Evitar que o formulário seja enviado
-
-            // Pegar valores dos campos de e-mail e senha
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-
-            // Autenticar o usuário com Firebase Authentication
-            firebase.auth().signInWithEmailAndPassword(email, password)
-                .then(function (userCredential) {
-                    // Login bem-sucedido
-                    var user = userCredential.user;
-                    console.log('Usuário logado:', user);
-
-                    // Redirecionar para a página principal (por exemplo, "dashboard.html")
-                    var bool = false;
-                    window.location.href = "home.html";
-                })
-                .catch(function (error) {
-                    // Exibir mensagem de erro
-                    var bool = false;
-                    errorMessage.textContent = "Erro no login: " + error.message;
-                });
-                
-        });
-    </script>
+    <script src="js/login-js.js"></script>
 
 </body>
 </html>
