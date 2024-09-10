@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+    <h1 class="titulo">Racha do love</h1><br>
+
+    <fieldset>
+        <legend>Cadastro</legend>
+    <form class="form-group">
+        <p> <label for="nome">Nome:</label>
+            <input type="text" size="35" id="nome" name="nome" autofocus>
+
+            <label for="email">Email:</label>
+            <input type="email" size="35" id="email" name="email">
+            
+            <label for="senha">Senha:</label>
+            <input type="password" size="35" id="senha" name="senha"><br>
+
+
+            <div class="grupo"><label for="posicao">Posição:</label>
+
+           <input type="radio" id="goleiro" name="posicao" value="goleiro">
+            <label for="goleiro">Goleiro</label> 
+            <input type="radio" id="zagueiro" name="posicao" value="zagueiro">
+            <label for="zagueiro">Zagueiro</label> </div>
+            <div class="grupo">
+            <input type="radio" id="ala" name="posicao" value="ala">
+            <label for="ala">Ala</label>
+            <input type="radio" id="atacante" name="posicao" value="atacante">
+            <label for="atacante">Atacante</label>
+            </div>
+        </p>
+    
+    <button type="submit" class="btn">Cadastrar</button>
+     </form>
+
+     <button type="button" class="btn">Ja tenho conta</button>
+
+    </fieldset>
+
+    </div>
+</body>
+</html>
